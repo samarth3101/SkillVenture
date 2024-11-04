@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SkillSwap</title>
+    <link rel="icon" href="assets/course.png" type="image/x-icon">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <main class="contact-container">
+        <h1>Contact Us</h1>
+
+        <section class="contact-info">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions, feedback, or need assistance, feel free to reach out to us. We'd love to hear
+                from you!</p>
+
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>Email: <a href="mailto:kiyaansolutions@gmail.com">support@skillswap.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>Phone: +91 8766794922</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Address: Royal Court Society, Pune, Maharashtra, 411001</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-form-section">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+        <script>
+            // Initialize Firebase (use your actual config from Firebase Console)
+            const firebaseConfig = {
+                apiKey: "your-api-key",
+                authDomain: "your-auth-domain",
+                projectId: "your-project-id",
+                storageBucket: "your-storage-bucket",
+                messagingSenderId: "your-messaging-sender-id",
+                appId: "your-app-id"
+            };
+
+            // Initialize Firebase
+            const app = firebase.initializeApp(firebaseConfig);
+            const db = firebase.firestore();
+
+            // Listen for form submission
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form from submitting the default way
+
+                // Collect form data
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                // Save form data to Firestore
+                db.collection('contacts').add({
+                    name: name,
+                    email: email,
+                    message: message,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp() // Add timestamp
+                }).then(() => {
+                    alert('Your message has been sent successfully!');
+                    // Optionally clear the form fields
+                    contactForm.reset();
+                }).catch((error) => {
+                    console.error('Error adding document: ', error);
+                });
+            });
+        </script>
+
+        <section class="social-media">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SkillSwap. All rights reserved.</p>
+    </footer>
+
+    <script src="contact.js"></script>
+
+    <!-- contact js  -->
+
+</body>
+
+</html>

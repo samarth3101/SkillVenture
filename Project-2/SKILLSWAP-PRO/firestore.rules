@@ -1,0 +1,17 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Allow authenticated users to create contact submissions
+    match /contacts/{contactId} {
+      allow create: if request.auth != null; // Allow authenticated users to create new contacts
+      allow read: if false; // Deny read access to others (optional)
+    }
+
+    // Original rule for all documents
+    match /{document=**} {
+      allow read, write: if request.time < timestamp.date(2024, 11, 19);
+    }
+  }
+}

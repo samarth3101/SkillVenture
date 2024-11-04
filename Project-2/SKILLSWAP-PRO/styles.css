@@ -1,0 +1,263 @@
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('assets/bgimg2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%; /* Allow more height for the container */
+    background-color: rgba(30, 30, 30, 0.9); /* Slightly darker for better contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack forms vertically */
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.form.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.form.hidden{
+    display: none;
+}
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px; /* Increase size for better visibility */
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444444; /* Darker input background for contrast */
+    color: #ffffff;
+    width: 100%;
+    transition: background-color 0.3s; /* Smooth transition for focus effect */
+}
+
+input:focus {
+    background-color: #555555; /* Change background on focus */
+    border: 1px solid #007bff; /* Highlight border on focus */
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Primary button color */
+    color: #ffffff; /* Text color for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    margin-bottom: 10px; /* Space between buttons */
+    font-size: 16px; /* Slightly larger font for readability */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.05);
+}
+
+.social-login {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.social-login p {
+    margin-bottom: 15px; /* Add space below the text */
+    color: #ffffff;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between social buttons */
+}
+
+.social-button {
+    background-color: #ffffff; /* Button background color */
+    border: none; /* Remove default border */
+    cursor: pointer;
+    width: 50px; /* Adjust size */
+    height: 50px; /* Adjust size */
+    border-radius: 50%; /* Make the button circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s; /* Smooth transform */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.social-button img {
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+}
+
+.social-button:hover {
+    transform: scale(1.1); /* Grow slightly on hover */
+}
+
+#dct{
+    color: #ffffff;
+    text-align: center;
+}
+
+.toggle-text {
+    margin-top: 20px; /* Increase margin for better spacing */
+    text-align: center;
+    color: #ffffff; /* Set to white for better visibility */
+    font-size: 16px; /* Slightly larger font for clarity */
+}
+
+.toggle-text span {
+    color: #007bff; /* Use the same blue for links */
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold; /* Make the link bold for emphasis */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.toggle-text span:hover {
+    color: #0056b3; /* Darker blue on hover for effect */
+}
+
+#toggleSignup{
+    color:#0056b3;
+}
+#toggleLogin{
+    color:#0056b3;
+}
+
+/* Loading screen styling */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    color: white;
+}
+
+.loading-screen.show {
+    display: flex; /* Show the loading screen when the 'show' class is added */
+}
+
+.loading-bar {
+    width: 0;
+    height: 5px;
+    background-color: #0056b3;
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 20px;
+}
+
+#loadingMessage {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Center the loading message */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 80%; /* Wider containers for medium screens */
+    }
+
+    button {
+        font-size: 14px; /* Slightly smaller font for buttons */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Increase width for tablets and small screens */
+        padding: 15px; /* Less padding for smaller devices */
+    }
+
+    h2 {
+        font-size: 20px; /* Reduce heading size on tablets */
+    }
+
+    button {
+        font-size: 14px; /* Smaller button font */
+    }
+
+    input {
+        padding: 8px; /* Smaller padding for inputs */
+    }
+
+    .social-button {
+        width: 40px; /* Reduce social button size */
+        height: 40px;
+    }
+
+    .social-button img {
+        width: 20px; /* Smaller icon size */
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Full-width container for small mobile screens */
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px; /* Smaller headings for mobile */
+    }
+
+    button {
+        font-size: 12px; /* Smaller button text */
+    }
+
+    input {
+        padding: 6px; /* Less padding for input fields */
+    }
+
+    .social-button {
+        width: 35px; /* Further reduce button size */
+        height: 35px;
+    }
+
+    .social-button img {
+        width: 18px; /* Adjust icon size */
+        height: 18px;
+    }
+
+    .toggle-text {
+        font-size: 14px; /* Smaller text for toggles */
+    }
+}

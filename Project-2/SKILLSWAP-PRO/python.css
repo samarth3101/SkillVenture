@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #f5f5f5; /* Light text */
+    line-height: 1.6;
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.introduction, .learning-outcomes, .resources, .conclusion {
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin: 20px 0 10px;
+}
+
+.learning-outcomes ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.pdf-container, .roadmap-container {
+    margin-top: 20px;
+}
+
+.btn {
+    background: #007bff; /* Button color */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #0056b3; /* Darker button color on hover */
+}
+
+.roadmap {
+    width: 100%; /* Responsive image */
+    max-width: 600px; /* Limit maximum width */
+    margin-top: 10px;
+    border: 2px solid #007bff; /* Border for the roadmap */
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background: #1e1e1e; /* Footer background */
+}

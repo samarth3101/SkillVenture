@@ -1,0 +1,309 @@
+/* General Styles */
+* {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif; /* Same font from first CSS */
+    background-color: #1e1e1e; /* Dark background */
+    color: #f4f4f4; /* Light text color */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222; /* Darker navbar background */
+    padding: 1.4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff; /* Accent color for logo */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    /* gap: 1.5rem; */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f4f4f4; /* Light text color for nav links */
+    padding: 10px 15px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    background-color: #333; /* Slightly lighter background on hover */
+    border-radius: 5px;
+}
+
+#logoutButton:hover {
+    color: rgb(188, 55, 55); /* Red hover effect for logout button */
+}
+
+#blbtn:hover{
+    color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    background: url('assets/hero-image.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f4f4f4; /* Light text color for hero section */
+    text-align: center;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    padding: 0.75rem 2rem;
+    background-color: #007bff; /* Bright blue button color */
+    color: #f4f4f4; /* Light text */
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #0c5cb2; /* Darker blue on hover */
+}
+
+/* Course Section */
+.course-section {
+    padding: 40px;
+    text-align: center;
+    background-color: black;
+    height: 100vh;
+}
+
+.course-section h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #007bff; /* Accent color for course heading */
+}
+
+.course-cards {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: #3a3a3a; /* Darker card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight hover movement */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f4f4f4; /* Light text for headings */
+}
+
+.card p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #ccc; /* Light gray for descriptions */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Button color */
+    color: #f4f4f4; /* Light text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#logoutbtn:hover{
+    background-color:rgb(188, 55, 55);
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #2b2b2b; /* Dark background for features */
+}
+
+.features h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #007bff; /* Accent color */
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.feature-card {
+    background-color: #3a3a3a; /* Dark background for feature cards */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow for cards */
+    width: 30%;
+    text-align: center;
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: #007bff; /* Accent color for icons */
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #ccc; /* Light gray for feature text */
+}
+
+/* Footer */
+.footer {
+    background-color: #222; /* Dark footer background */
+    color: #f4f4f4; /* White text for footer */
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* chatbot styling */
+#chatbot-container {
+    margin: 9 auto;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #000000;
+}
+
+#chat-window {
+    height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#user-input {
+    width: calc(100% - 50px);
+    padding: 5px;
+}
+
+button {
+    padding: 5px 10px;
+}
+
+/* Loading screen styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading-bar {
+    width: 50%;
+    height: 5px;
+    background-color: #4CAF50;
+    transition: width 3s ease;
+}
+
+/* Fade-in and fade-out animations */
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

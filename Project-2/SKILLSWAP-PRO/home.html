@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SkillSwap</title>
+
+
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="home.html">SkillSwap</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-menu" id="nav-menu">
+            <ul>
+                <li><a href="dashboard.html" id="anotherbtn">Dashboard</a></li>
+                <!-- <li><a href="home.html" class="active">Home</a></li> -->
+                <li><a href="profile.html" id="anotherbtn">Profile</a></li>
+                <li><a href="course.html" id="anotherbtn">Courses</a></li>
+                <li><a href="setting.html" id="anotherbtn">Settings</a></li>
+                <li><a href="#" id="logoutButton"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Your Learning Journey</h1>
+            <p>Enhance your skills and achieve your goals with our curated courses and personalized mentors</p>
+            <a href="start.html" class="btn-primary">Start Learning</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Why Choose Us?</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <i class="fas fa-chalkboard-teacher"></i>
+                <h3>Expert Instructors</h3>
+                <p>Learn from industry experts who are passionate about teaching.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Hands-on Learning</h3>
+                <p>Practice with real-world projects to apply what you've learned.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-certificate"></i>
+                <h3>Certifications</h3>
+                <p>Get certified upon course completion and boost your career.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space Background -->
+    <div class="space-container">
+        <div class="stars"></div>
+    </div>
+
+
+    <!-- chatbot -->
+    <script>
+        window.embeddedChatbotConfig = {
+            chatbotId: "H4vXOZVApGu6tplEfs3tM",
+            domain: "www.chatbase.co"
+        }
+    </script>
+    <script src="https://www.chatbase.co/embed.min.js" chatbotId="H4vXOZVApGu6tplEfs3tM" domain="www.chatbase.co" defer>
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 SKillSwap. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const featureCards = document.querySelectorAll('.feature-card');
+
+            const showCards = () => {
+                featureCards.forEach(card => {
+                    const cardPosition = card.getBoundingClientRect();
+                    // Check if the card is in the viewport
+                    if (cardPosition.top < window.innerHeight && cardPosition.bottom >= 0) {
+                        card.classList.add('visible'); // Add class to make it visible
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', showCards);
+            showCards(); // Call once to check on load
+
+            // Star twinkling effect
+            const starsContainer = document.querySelector('.stars');
+
+            const createStars = (numStars) => {
+                for (let i = 0; i < numStars; i++) {
+                    const star = document.createElement('div');
+                    star.className = 'star';
+                    star.style.position = 'absolute';
+                    star.style.width = Math.random() * 2 + 'px'; // Random star size
+                    star.style.height = Math.random() * 4 + 'px'; // Square stars
+                    star.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'; // Star color
+                    star.style.borderRadius = '1000%'; // Circular stars
+                    star.style.opacity = Math.random(); // Random opacity for twinkling
+                    star.style.top = Math.random() * 200 + 'vh'; // Random vertical position
+                    star.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+                    starsContainer.appendChild(star);
+                }
+            };
+
+            createStars(3500); // Change the number of stars here
+        });
+    </script>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-bar"></div> <br>
+        <div id="loadingMessage">Loading...</div>
+    </div>
+
+    <!-- Loading Screen for Logout -->
+    <!-- Loading Screen (General for all actions) -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-bar"></div>
+        <br />
+        <div id="loadingMessage">Loading...</div>
+    </div>
+
+
+
+    <!-- FontAwesome icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="dist/bundle.js"></script>
+
+</body>
+
+</html>

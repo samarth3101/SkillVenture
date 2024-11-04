@@ -1,0 +1,168 @@
+*{
+    font-family: "Ubuntu", sans-serif;
+}
+/* General Styles */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Mentor Profile Section */
+.mentor-profile {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #00aaff;
+}
+
+.mentor-name {
+    color: #00aaff;
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+.mentor-title {
+    color: #bbb;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    color: #00aaff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social-links a:hover {
+    color: #0077cc;
+}
+
+/* Mentor Expertise Section */
+.mentor-expertise {
+    padding: 30px 20px;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+.mentor-expertise h2 {
+    font-size: 1.8em;
+    color: #00aaff;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #e0e0e0;
+}
+
+.skill-level {
+    color: #00aaff;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* Mentor Courses Section */
+.mentor-courses {
+    padding: 30px 20px;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+.mentor-courses h2 {
+    font-size: 1.8em;
+    color: #00aaff;
+}
+
+.course-card {
+    background-color: #292929;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.course-card h3 {
+    color: #00aaff;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    color: #bbb;
+}
+
+.course-card a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.course-card a:hover {
+    color: #0077cc;
+}
+
+/* Mentor Reviews Section */
+.mentor-reviews {
+    padding: 30px 20px;
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+}
+
+.mentor-reviews h2 {
+    font-size: 1.8em;
+    color: #00aaff;
+}
+
+.reviews p {
+    color: #bbb;
+    font-style: italic;
+}
+
+.rating .stars {
+    color: #ffcc00;
+    font-size: 1.5em;
+}
+
+/* Mentor Availability Section */
+.mentor-availability {
+    padding: 30px 20px;
+    background-color: #1e1e1e;
+}
+
+.mentor-availability h2 {
+    font-size: 1.8em;
+    color: #00aaff;
+}
+
+.mentor-availability p {
+    color: #bbb;
+}
+
+.contact-mentor {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.contact-mentor:hover {
+    background-color: #0077cc;
+}

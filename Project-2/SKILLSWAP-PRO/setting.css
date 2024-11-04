@@ -1,0 +1,185 @@
+/* General Reset */
+* {
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Body Styles */
+body {
+    background-color: #000000; /* Dark background */
+    color: #f4f4f4; /* Light text color */
+    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #222; /* Pure black background */
+    padding: 1.4rem 2rem; /* Ensures consistent padding */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw; /* Full viewport width to avoid inconsistencies */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar stays above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    box-sizing: border-box; /* Ensure padding and borders don’t affect width */
+}
+
+.navbar .logo a {
+    color: #007bff; /* Accent color for logo */
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem; /* Consistent spacing between nav items */
+    margin: 0; /* Remove any extra margin */
+    padding: 0; /* Remove padding */
+}
+
+.navbar nav ul li a {
+    color: #f4f4f4; /* Light text color for nav links */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px; /* Consistent padding for nav items */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px; /* Rounded corners for better appearance */
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    background-color: #333; /* Slightly lighter background on hover */
+    color: #007bff; /* Accent color for active or hovered links */
+    transform: translateY(-2px); /* Hover effect */
+}
+
+#lgout:hover {
+    color: #f4f4f4;
+    background-color: rgb(188, 55, 55); /* Specific hover color for logout */
+}
+
+/* Settings Container Styles */
+.settings-container {
+    max-width: 1200px;
+    margin: 7rem auto 2rem; /* Margin-top to avoid overlap with fixed navbar */
+    padding: 2rem;
+    background-color: #2b2b2b; /* Dark background */
+    border-radius: 15px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.8); /* Matching shadow style */
+}
+
+/* Main Heading Styles */
+h2, h3 {
+    color: #007bff; /* Accent color */
+    text-align: center;
+    font-weight: 600; /* Slightly heavier font weight */
+    margin-bottom: 2rem; /* Consistent margin spacing */
+}
+
+/* Settings Section Styles */
+.settings-section {
+    margin-bottom: 2rem;
+    padding: 2rem; /* Consistent padding */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #3a3a3a; /* Dark background */
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.settings-section:hover {
+    background-color: #444; /* Darker background on hover */
+}
+
+/* Form Group Styles */
+.form-group {
+    margin: 1.5rem 0;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #f4f4f4; /* Consistent text color */
+}
+
+/* Input and Textarea Styling */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4a4a4a; /* Darker input background */
+    border: 1px solid #555;
+    border-radius: 5px;
+    color: #f4f4f4;
+    transition: border-color 0.3s, background-color 0.3s;
+    margin-bottom: 1rem; /* Consistent spacing between inputs */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Blue accent on focus */
+    background-color: #333; /* Slightly darker on focus */
+}
+
+/* Button Styling */
+button, .btn-primary {
+    padding: 0.75rem 2rem;
+    background-color: #007bff; /* Bright button color */
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s;
+    margin: 1rem 0;
+    width: 100%; /* Full width for buttons */
+    max-width: 200px; /* Optional max-width */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: #0c5cb2; /* Darker blue on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Footer */
+.footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    position: relative;
+    margin-top: auto;
+    font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar nav ul {
+        flex-direction: column; /* Stack nav items */
+        gap: 1rem; /* Reduced gap on smaller screens */
+    }
+
+    .settings-container {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    h2, h3 {
+        font-size: 1.5rem; /* Adjust heading size for mobile */
+    }
+}

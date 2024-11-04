@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - SkillSwap</title>
+
+    <link rel="icon" href="assets/course.png" type="image/x-icon">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">SkillSwap</div>
+            <ul class="nav-links">
+                <li><a href="dashboard.html" id="blbtn">Dashboard</a></li>
+                <li><a href="profile.html" id="blbtn">Profile</a></li>
+                <!-- <li><a href="course.html" class="active">Courses</a></li> -->
+                <li><a href="setting.html" id="blbtn">Settings</a></li>
+                <li><a href="login.html" id="logoutbtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="course-section">
+        <h1>Available Modules</h1>
+        <div class="course-cards">
+
+            <div class="card">
+                <h2>Web Development</h2>
+                <p>Learn HTML, CSS, JavaScript, and more. <br> With exclusive Roadmap. </p>
+                <a href="web-development.html" class="btn">Skill Module</a>
+            </div>
+            <div class="card">
+                <h2>Python Programming</h2>
+                <p>Master Python with real-world projects. <br> With exclusive Roadmap.</p>
+                <a href="python-programming.html" class="btn">Skill Module</a>
+            </div>
+            <div class="card">
+                <h2>JAVA</h2>
+                <p>Explore the adventure of JAVA Programming Language. <br> With exclusive Roadmap. </p>
+                <a href="java.html" class="btn">Skill Module</a>
+            </div>
+            <div class="card">
+                <h2>C++</h2>
+                <p>Grasp the concept of CPP before Creating Games. <br> With exclusive Roadmap. </p>
+                <a href="cpp.html" class="btn">Skill Module</a>
+            </div>
+            <div class="card">
+                <h2>Data Science</h2>
+                <p>Explore data manipulation, analysis, and visualization. <br> With exclusive Roadmap. </p>
+                <a href="data-science.html" class="btn">Skill Module</a>
+            </div>
+            <div class="card">
+                <h2>Machine Learning</h2>
+                <p>Learn the fundamentals of Machine learning. <br> With exclusive Roadmap. </p>
+                <a href="machine-learning.html" class="btn">Skill Module</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-bar"></div>
+        <br />
+        <div id="loadingMessage">Loading...</div>
+    </div>
+
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>

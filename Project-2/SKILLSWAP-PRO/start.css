@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #f5f5f5; /* Light text */
+    line-height: 1.6;
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; /* Center the content */
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #007bff; /* Primary color */
+}
+
+.search-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin-right: 10px;
+    border: 2px solid #007bff; /* Border color */
+    border-radius: 5px;
+    background-color: #1e1e1e; /* Input background */
+    color: #f5f5f5; /* Input text color */
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #0056b3; /* Darker border on focus */
+}
+
+button {
+    padding: 10px 15px;
+    background: #007bff; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3; /* Darker button color on hover */
+}
+
+button i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.mentor-results {
+    margin-bottom: 40px;
+}
+
+.mentor-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Evenly distribute mentor cards */
+}
+
+.mentor-card {
+    background-color: #1e1e1e; /* Card background */
+    border: 2px solid #007bff; /* Card border */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 30%; /* Card width */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mentor-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.5); /* Shadow on hover */
+}
+
+.contact-btn {
+    display: inline-block; /* Allow padding and margin to take effect */
+    margin-top: 10px;
+    padding: 10px 20px; /* Increase padding for better size */
+    background: #28a745; /* Contact button color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1em; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Text color */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.contact-btn:hover {
+    background: #218838; /* Darker contact button color on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.contact-btn:active {
+    transform: translateY(0); /* Reset lift effect when clicked */
+}
+
+.extra-features {
+    margin-top: 40px;
+}
+
+.extra-features ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.extra-features li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center; /* Center icon and text */
+}
+
+.extra-features i {
+    margin-right: 10px; /* Space between icon and text */
+    color: #007bff; /* Icon color */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    background: #1e1e1e; /* Footer background */
+}
